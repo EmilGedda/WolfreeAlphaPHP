@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Wolfree Alpha 1337</title>
+    <script src="jquery.js"></script>
+    <div id="i"></div>
+</head>
+<body>
+
+<script>
+    function _(ele) {
+        return document.getElementById(ele);
+    }
+    (function(){
+        if (!!window.EventSource) {
+            var source = new EventSource('wolf.php');
+            source.onmessage = function(e) {
+                console.log(e.data); //Use e.data to extract status and account from the response
+                var obj = JSON.parse(e.data);
+                if(obj.percent == 100)
+                    source.close();
+            };
+        } else {
+            // Result to xhr polling :(
+        }
+    })();
+</script>
+</body>
+</html>
