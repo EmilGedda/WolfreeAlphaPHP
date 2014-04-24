@@ -1,7 +1,9 @@
 WolfreeAlpha
 ============
 
-A php-script which used to generate WolframAlpha pro-accounts for free. Made public after WolframAlpha decided to patch this.
+A php-script which used to generate WolframAlpha pro-accounts for free. 
+Made public after WolframAlpha decided to patch this.
+THIS DOES NOT WORK ANYMORE.
 
 The script runs for about 20 seconsd, continously sending status updates to the client. 
 
